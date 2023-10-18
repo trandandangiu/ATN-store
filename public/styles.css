@@ -1,0 +1,82 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 2rem;
+  font-family: tahoma;
+}
+
+li {
+  list-style: none;
+}
+
+label {
+  margin-bottom: .2rem;
+  font-weight: 700;
+  display: block;
+}
+
+.content_Store {
+  width: 25%;
+  display: block;
+  float: left;
+}
+
+.title-Store h1 {
+  text-align: center;
+  color: rgb(25, 0, 255);
+  margin-bottom: 1.5rem;
+}
+
+.content_Store h2 {
+  color: #006600;
+  margin-bottom: .5rem;
+}
+
+div {
+  margin-bottom: .5rem;
+}
+
+input[type="text"] {
+  width: 80%;
+  padding: 5px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #a5a5a5;
+}
+
+button {
+  background: rgb(94, 255, 0);
+  cursor: pointer;
+  text-transform: uppercase;
+  padding: 0.5rem;
+  border-radius: 5px;
+  color: #fff;
+  border: none;
+}
+
+.content_Store ul {
+  background: aqua;
+  padding: 0.5rem;
+  width: 100%;
+  margin-bottom: .5rem;
+}
+
+.content_Store ul li {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  margin-bottom: .3rem;
+}
+
+.content_Store ul li span {
+  font-weight: bold;
+}
+.content_Store .list_Stores{
+  width: 90%;
+  height: 220px;
+  overflow-y: scroll;
+}

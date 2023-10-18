@@ -1,0 +1,67 @@
+extends layout
+
+block content
+  div.title-Store
+    h1 ATN Toy's    
+
+  //- Create Stores
+  div.content_Store
+    h2 Create Product
+    form(action="/" method="POST")
+      div
+        label(for="title") Toy's Name
+        input(type="text" name="title" required="required")
+      div 
+        label(for="description") Description
+        input(type="text" name="description" required="required")
+      div 
+        label(for="author") Price
+        input(type="text" name="author" required="required")
+      div  
+       button(type="submit") Create
+
+  //- Read Stores
+  div.content_Store   
+    h2 Read Product
+    .list_Stores 
+      each Store in Stores 
+        ul
+          li
+           span Toy's Name:&nbsp
+           =Store.title
+          li
+           span Description:&nbsp
+           =Store.description
+          li
+           span Price:&nbsp
+           =Store.author
+          li
+           span ID:&nbsp
+           =Store._id
+
+  //- Update Stores        
+  div.content_Store
+    h2 Update Product
+    form(action="/update" method="POST")
+      div
+        label(for="id") ID
+        input(type="text" name="id" required="required")
+      div
+        label(for="title") Toy's Name
+        input(type="text" name="title" required="required")
+      div 
+        label(for="description") Description
+        input(type="text" name="description" required="required")
+      div 
+        label(for="author") Price
+        input(type="text" name="author" required="required")
+      button(type="submit") Update   
+
+  //- Delete Stores     
+  div.content_Store  
+    h2 Delete Product
+    form(action="/delete" method="POST")
+      div
+        label(for="id") ID
+        input(type="text" name="id" required="required")
+      button(type="submit") Delete
